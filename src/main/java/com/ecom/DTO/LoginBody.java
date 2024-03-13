@@ -1,4 +1,4 @@
-package com.ecom.Controller.Model;
+package com.ecom.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

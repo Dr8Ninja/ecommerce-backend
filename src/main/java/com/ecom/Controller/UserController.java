@@ -1,8 +1,8 @@
 package com.ecom.Controller;
 
-import com.ecom.Controller.Model.LoginBody;
-import com.ecom.Controller.Model.LoginResponse;
-import com.ecom.Controller.Model.RegistrationBody;
+import com.ecom.DTO.LoginBody;
+import com.ecom.DTO.LoginResponse;
+import com.ecom.DTO.RegistrationBody;
 import com.ecom.Exception.UserAlreadyExistsException;
 import com.ecom.Service.UserService;
 import jakarta.validation.Valid;

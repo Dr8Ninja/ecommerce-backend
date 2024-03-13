@@ -1,7 +1,7 @@
 package com.ecom.Service;
 
-import com.ecom.Controller.Model.LoginBody;
-import com.ecom.Controller.Model.RegistrationBody;
+import com.ecom.DTO.LoginBody;
+import com.ecom.DTO.RegistrationBody;
 import com.ecom.Exception.UserAlreadyExistsException;
 import com.ecom.Model.User;
 import com.ecom.Repository.UserRepository;
