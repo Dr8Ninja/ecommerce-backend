@@ -4,19 +4,18 @@ import com.ecom.DTO.LoginBody;
 import com.ecom.DTO.LoginResponse;
 import com.ecom.DTO.RegistrationBody;
 import com.ecom.Exception.UserAlreadyExistsException;
+import com.ecom.Model.User;
 import com.ecom.Service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
-public class UserController {
+public class AuthenticationController {
 
     @Autowired
     UserService userService;
@@ -43,5 +42,10 @@ public class UserController {
             response.setJwt(jwt);
             return ResponseEntity.ok(response);
         }
+    }
+
+    @GetMapping("/me")
+    public User getLoggedInUserDetails(@AuthenticationPrincipal User user){
+        return user;
     }
 }

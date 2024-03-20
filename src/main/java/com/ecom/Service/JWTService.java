@@ -4,4 +4,6 @@ import com.ecom.Model.User;
 
 public interface JWTService {
     public String generateJWT(User user);
+
+    public String getUsername(String token);
 }
