@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface UserService {
 
-    public void registerUser(@RequestBody RegistrationBody registrationBody) throws UserAlreadyExistsException;
+    void registerUser(@RequestBody RegistrationBody registrationBody) throws UserAlreadyExistsException;
 
-    public String loginUser(LoginBody loginBody);
+    String loginUser(LoginBody loginBody);
 }
